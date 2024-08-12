@@ -1,0 +1,58 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family:  'Source Sans Pro';
+  src:
+    url('/fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+    url('/fonts/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src:
+    url('/fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+    url('/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply w-full min-w-[320px] font-sans text-[15px] font-normal leading-[18px] text-blue-900;
+  }
+  .text-title-bold {
+    @apply leading-12 text-[48px] font-bold uppercase;
+  }
+  .text-subheading,
+  .text-subheading-bold {
+    @apply text-2xl font-bold leading-[26px];
+  }
+  .text-subheading-bold {
+    @apply font-bold;
+  }
+  .text-body-caps {
+    @apply text-[15px] font-bold uppercase leading-[18px] tracking-[0.75px];
+  }
+  .text-caption,
+  .text-caption-bold {
+    @apply text-[10px] uppercase leading-[14px] tracking-[1px];
+  }
+}
+
+html,
+body {
+  @apply h-full w-full;
+}
+html.smooth-scroll {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply overflow-y-scroll;
+}
